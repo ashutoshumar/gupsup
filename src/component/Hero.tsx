@@ -31,7 +31,7 @@ const Hero = () => {
               <motion.span
                 className={darkMode ? "block text-black" : " text-white"}
               >
-                Hi, It's {`<GUPp-SUPp/>`} Time 
+                Hi, {"It's"} {`<GUPp-SUPp/>`} Time 
               </motion.span>
               <span className="block text-blue-500 z-0 lg:inline">
                 <ReactTypical

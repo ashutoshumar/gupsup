@@ -18,7 +18,7 @@ const Footer = () => {
                     <a href="/" className="hover:underline">{`<GUPp-SUPp/>`}</a>
                   </li>
                   <li>
-                    <a href="/" className="hover:underline">Threads</a>
+                    <a href="/threads" className="hover:underline">Threads</a>
                   </li>
                 </ul>
               </div>
@@ -26,12 +26,12 @@ const Footer = () => {
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                   <li className="mb-4">
-                    <a href="https://github.com/themesberg/flowbite" className="hover:underline">
-                      Github
+                    <a href={process.env.TWITTER} className="hover:underline">
+                      X
                     </a>
                   </li>
                   <li>
-                    <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">
+                    <a href={process.env.INSTAGRAM} className="hover:underline">
                       Instagram
                     </a>
                   </li>
