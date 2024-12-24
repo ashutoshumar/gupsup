@@ -5,7 +5,6 @@ import { Button } from '@nextui-org/react'
 import { putAdminUserById } from '@/lib/request'
 import { useRouter } from "next/navigation";
 import toast, { Toaster } from "react-hot-toast";
-import { error } from 'console'
 import { UserInterface } from '@/utility/UserInterface'
 
 const UpdateUser = ({user}:{user:UserInterface}) => {

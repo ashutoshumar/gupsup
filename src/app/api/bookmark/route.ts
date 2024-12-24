@@ -2,8 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { connectToDatabase } from "@/lib/database";
 import { BookMark } from "@/models/BookMark";
 import { getServerSession } from "next-auth";
-import { authOption } from "../auth/[...nextauth]/route";
-
+import { authOption } from "@/utility/auth";
 
 
 

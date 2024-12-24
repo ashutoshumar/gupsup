@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Button } from "@nextui-org/react";
 import UserLists from "./user/UserLists";
 import PostLists from "./posts/PostLists";

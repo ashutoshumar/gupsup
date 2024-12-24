@@ -2,7 +2,7 @@ import { NextRequest,NextResponse } from "next/server";
 import { connectToDatabase } from "@/lib/database";
 import { Like } from "@/models/Like";
 import { getServerSession } from "next-auth";
-import { authOption } from "../auth/[...nextauth]/route";
+import { authOption } from "@/utility/auth";
 export const GET = async (req:NextRequest,{ params }: { params: { slug: string } })=>
   {
      

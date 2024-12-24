@@ -14,14 +14,14 @@ cloudinary.config({
   
   
   export const GET= async(req: NextRequest)=>{
-     
+    let page = req.nextUrl.searchParams.get("initial");
+    const pageNumber = page ? parseInt(page, 10) : 0;
+
       try {
          
         
           await connectToDatabase();
-          let page = req.nextUrl.searchParams.get("initial");
-          const pageNumber = page ? parseInt(page, 10) : 0;
-       const post =await Thread.aggregate([
+           const post =await Thread.aggregate([
               {
                 $facet: {
                   metadata: [{ $count: 'totalCount' }],

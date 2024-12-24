@@ -3,14 +3,14 @@ import { connectToDatabase } from "@/lib/database";
 import { Post } from "@/models/Post";
 
 export const GET= async(req: NextRequest)=>{
-   
+  let page=req.nextUrl.searchParams.get('initial')
+  let pageNumber = page?parseInt(page, 10):0;
+
     try {
        
       
         await connectToDatabase();
-        let page=req.nextUrl.searchParams.get('initial')
-        let pageNumber = page?parseInt(page, 10):0;
-       const post =await Post.aggregate([
+         const post =await Post.aggregate([
             {
               $facet: {
                 metadata: [{ $count: 'totalCount' }],

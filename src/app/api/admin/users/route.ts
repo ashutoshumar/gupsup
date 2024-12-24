@@ -16,13 +16,14 @@ interface UserData {
 
 
 export const GET = async (req: NextRequest) => {
+   // Get page number from query parameters
+   let page: string | null = req.nextUrl.searchParams.get("initial");
+   const pageNumber = page ? parseInt(page, 10) : 0;
+
   try {
     await connectToDatabase();
 
-    // Get page number from query parameters
-    let page: string | null = req.nextUrl.searchParams.get("initial");
-    const pageNumber = page ? parseInt(page, 10) : 0;
-
+   
     console.log("Admin route, page:", pageNumber);
 
     // Use aggregation to fetch users with pagination

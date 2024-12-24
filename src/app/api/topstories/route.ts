@@ -3,11 +3,12 @@ import { Post } from "@/models/Post";
 import { connectToDatabase } from "@/lib/database";
 
 export const GET=async (req:NextRequest)=>{
-    try {
-        await connectToDatabase()
-        let page=req.nextUrl.searchParams.get('initial')
+  let page=req.nextUrl.searchParams.get('initial')
         let pageNumber = page?parseInt(page, 10):0;
        
+    try {
+        await connectToDatabase()
+        
         const post = await Post.aggregate([
             {
               $facet: {

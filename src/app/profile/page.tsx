@@ -1,22 +1,15 @@
 import React from 'react'
 import Profile from '@/component/profile/Profile'
-import { ResolvingMetadata,Metadata } from 'next'
+import { Metadata } from 'next'
 import { getServerSession } from 'next-auth'
-import { authOption } from '../api/auth/[...nextauth]/route'
-export async function generateMetadata(
-  parent: ResolvingMetadata
-): Promise<Metadata> {
- 
- 
-  // fetch data
-  const session =await getServerSession(authOption)
- 
- 
-  
- 
+import { authOption } from "@/utility/auth";
+export async function generateMetadata(): Promise<Metadata> {
+  // Fetch the session
+  const session = await getServerSession(authOption);
+
   return {
-    title: session!.user!.name,
-  }
+    title: session?.user?.name || "Default Title",
+  };
 }
 const page = async() => {
   const session =await getServerSession(authOption)

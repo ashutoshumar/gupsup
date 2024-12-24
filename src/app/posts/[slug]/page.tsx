@@ -7,11 +7,8 @@ import { getBlog } from "@/lib/request"
  
 
  
-export async function generateMetadata(
-  { params }:{params:{slug:string}},
-  parent: ResolvingMetadata
-): Promise<Metadata> {
- 
+export async function generateMetadata({ params }:{params:{slug:string}}): Promise<Metadata> {
+
   const id = params.slug
  
   // fetch data

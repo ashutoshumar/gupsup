@@ -3,7 +3,7 @@ import { Post } from "@/models/Post";
 import { connectToDatabase } from "@/lib/database";
 import { Like } from "@/models/Like";
 import { getServerSession } from "next-auth";
-import { authOption } from "../../auth/[...nextauth]/route";
+import { authOption } from "@/utility/auth";
 import mongoose from "mongoose";
 export const GET = async (req:NextRequest,{ params }: { params: { slug: string } })=>
   {

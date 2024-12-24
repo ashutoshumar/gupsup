@@ -3,11 +3,12 @@ import { Post } from "@/models/Post";
 import { connectToDatabase } from "@/lib/database";
 
 export const GET=async(req:NextRequest)=>{
+  let tag:string|null= req.nextUrl.searchParams.get('tags')
+       
     try {
 
         await connectToDatabase();
       
-        let tag:string|null= req.nextUrl.searchParams.get('tags')
         
     
         const post =await Post.aggregate([

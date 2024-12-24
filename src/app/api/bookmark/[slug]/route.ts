@@ -3,7 +3,7 @@ import { connectToDatabase } from "@/lib/database";
 import { BookMark } from "@/models/BookMark";
 import { Post } from "@/models/Post";
 import { getServerSession } from "next-auth";
-import { authOption } from "../../auth/[...nextauth]/route";
+import { authOption } from "@/utility/auth";
 import mongoose from "mongoose";
 
 

@@ -3,7 +3,7 @@ import { connectToDatabase } from "@/lib/database";
 import { User } from "@/models/User";
 const cloudinary = require("cloudinary");
 import { getServerSession } from 'next-auth'
-import { authOption } from "../auth/[...nextauth]/route";
+import { authOption } from "@/utility/auth";
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_NAME,
     api_key: process.env.CLOUDINARY_API_KEY,

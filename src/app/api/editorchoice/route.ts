@@ -4,13 +4,14 @@ import { connectToDatabase } from "@/lib/database";
 
 
 export const GET = async (req: NextRequest) => {
+   // Get the `limit` query parameter and parse it
+   let limit = req.nextUrl.searchParams.get("limit");
+   const parsedLimit: number = limit ? parseInt(limit, 10) : 10; // Default to 10 if limit is not provided
+
   try {
     await connectToDatabase();
 
-    // Get the `limit` query parameter and parse it
-    let limit = req.nextUrl.searchParams.get("limit");
-    const parsedLimit: number = limit ? parseInt(limit, 10) : 10; // Default to 10 if limit is not provided
-
+   
     // Perform aggregation
     const post = await Post.aggregate([
       {

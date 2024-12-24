@@ -12,13 +12,14 @@ interface PostData {
 }
 
 export const GET = async (req: NextRequest) => {
+  // Retrieve page number from query params and parse it as a number
+  let page = req.nextUrl.searchParams.get("initial");
+  const pageNumber = page ? parseInt(page, 10) : 0;
+
   try {
     await connectToDatabase();
 
-    // Retrieve page number from query params and parse it as a number
-    let page = req.nextUrl.searchParams.get("initial");
-    const pageNumber = page ? parseInt(page, 10) : 0;
-
+    
     console.log("Admin route, page:", pageNumber);
 
     // Use MongoDB aggregation pipeline to paginate posts

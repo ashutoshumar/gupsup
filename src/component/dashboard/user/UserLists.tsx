@@ -1,6 +1,6 @@
 "use client"
 import React,{useState,useEffect} from 'react'
-import { MdEdit ,MdDelete} from "react-icons/md";
+import { MdEdit } from "react-icons/md";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import { deleteAdminUserById, getAdminUsers } from "@/lib/request";
