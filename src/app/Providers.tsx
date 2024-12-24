@@ -2,7 +2,7 @@
 import {NextUIProvider} from '@nextui-org/react'
 import  { PropsWithChildren} from "react";
 import { SessionProvider } from "next-auth/react";
-import { AuthProvider } from '@/test/authProvider';
+import { AuthProvider } from '@/utility/authProvider';
 import {useRouter} from 'next/navigation'
 import { ThemeProvider } from '@/lib/themeProvider';
 export const Provider=({ children }: PropsWithChildren<{}>)=>{
