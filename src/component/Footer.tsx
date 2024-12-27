@@ -84,7 +84,7 @@ const Footer = () => {
                 </svg>
                 <span className="sr-only">Discord community</span>
               </a>
-              <a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+              <a href="process.env.TWITTER" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                 <svg
                   className="w-5 h-5"
                   aria-hidden="true"
@@ -100,7 +100,7 @@ const Footer = () => {
                 </svg>
                 <span className="sr-only">Twitter page</span>
               </a>
-              <a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+              <a href="process.env.INSTAGRAM" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                 <svg
                   className="w-5 h-5"
                   aria-hidden="true"

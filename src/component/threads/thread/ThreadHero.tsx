@@ -7,11 +7,13 @@ import { useSession } from "next-auth/react";
 
 const ThreadHero = ({
   id,
+  username,
   title,
   description,
  
 }: {
   id: string;
+  username:string
   title: string;
   description: string;
  
@@ -36,7 +38,7 @@ const ThreadHero = ({
           <div className=" w-full flex flex-col justify-center items-end ">
          
          
-        {session && session.user?.email === "ashu@gmail.com" && (
+        {session && session.user?.role === username && (
             <div className="mx-4 md:mx-16">
              <Button size="lg"  color="primary" variant="ghost">
    

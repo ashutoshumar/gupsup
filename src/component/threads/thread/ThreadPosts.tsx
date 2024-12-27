@@ -20,6 +20,7 @@ const ThreadPosts = async({ token }: { token: string }) => {
       {/* Thread Hero Section */}
       <ThreadHero
         id={data.post._id}
+        username={data.post.username}
         title={data.post.title}
         description={data.post.description}
       />
